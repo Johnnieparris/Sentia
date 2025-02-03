@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
         {
           
             GameObject bullet = Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce * -1, ForceMode2D.Impulse);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
             Debug.Log("fire");
             time = 0;
         }

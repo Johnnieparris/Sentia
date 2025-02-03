@@ -1,4 +1,4 @@
-using System.Numerics;
+//using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,7 +28,7 @@ public class PlayerCtrl : MonoBehaviour
     {
 
         //handle movement
-        UnityEngine.Vector2 moveValue = moveAction.ReadValue<UnityEngine.Vector2>();
+        Vector2 moveValue = moveAction.ReadValue<Vector2>();
         rb.linearVelocity = moveValue * moveSpeed; 
 
         if (moveValue.x > 0) {spriteRenderer.flipX = false;}
@@ -49,9 +49,14 @@ public class PlayerCtrl : MonoBehaviour
 
     void CheckAttack()
     {
-        UnityEngine.Vector2 attackDirection = attackAction.ReadValue<UnityEngine.Vector2>();
-        firePoint.transform.localPosition = new UnityEngine.Vector3(0.175f * attackDirection.x, 0.175f * attackDirection.y, 0);
+        Vector2 attackDirection = attackAction.ReadValue<Vector2>();
+        firePoint.transform.localPosition = new Vector3(0.175f * attackDirection.x, 0.175f * attackDirection.y, 0);
+        Debug.Log(Mathf.Atan2(attackDirection.y, attackDirection.x));
+        firePoint.transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(attackDirection.y, attackDirection.x)* Mathf.Rad2Deg-90);
         if (attackDirection.magnitude > 0){weapon.Fire();}
+
+        if (attackDirection.x > 0) {spriteRenderer.flipX = false;}
+        if (attackDirection.x < 0) {spriteRenderer.flipX = true;}
     }
 }
 
