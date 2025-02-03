@@ -15,23 +15,19 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
- 
+        time += Time.deltaTime;
     }
 
     public void Fire()
     {
-        
-        time += Time.deltaTime;
 
         float nextTimeToFire = 1/fireRate;
-        Debug.Log(nextTimeToFire);
 
         if (time >= nextTimeToFire)
         {
           
             GameObject bullet = Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
             bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
-            Debug.Log("fire");
             time = 0;
         }
         

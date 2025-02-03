@@ -10,13 +10,14 @@ public class EnemyBehaviour : MonoBehaviour
     private bool isMoving = false;
     private Vector3 targetPosition;
 
-    
+    public Animator animator;
     
 
     private Vector2 targetDirection;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -36,11 +37,6 @@ void Update()
         }
     }
 
-    void Move(Vector3 direction)
-    {
-        transform.position += direction * speed * Time.deltaTime;
-    }
-
     Vector3 CalculateDirection()
     {
         // Calculate the difference between the player's position and the enemy's position
@@ -52,10 +48,14 @@ void Update()
             // Move horizontally (left or right)
             if (direction.x > 0)
             {
+                animator.SetInteger("Vertical", 0);
+                animator.SetInteger("Horizontal", -1);
                 return Vector3.right; // Move right
             }
             else
             {
+                animator.SetInteger("Vertical", 0);
+                animator.SetInteger("Horizontal", 1);
                 return Vector3.left; // Move left
             }
         }
@@ -64,10 +64,14 @@ void Update()
             // Move vertically (up or down)
             if (direction.y > 0)
             {
+                animator.SetInteger("Vertical", 1);
+                animator.SetInteger("Horizontal", 0);
                 return Vector3.up; // Move up
             }
             else
             {
+                animator.SetInteger("Vertical", -1);
+                animator.SetInteger("Horizontal", 0);
                 return Vector3.down; // Move down
             }
         }

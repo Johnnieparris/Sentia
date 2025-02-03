@@ -51,10 +51,12 @@ public class PlayerCtrl : MonoBehaviour
     {
         Vector2 attackDirection = attackAction.ReadValue<Vector2>();
         firePoint.transform.localPosition = new Vector3(0.175f * attackDirection.x, 0.175f * attackDirection.y, 0);
-        Debug.Log(Mathf.Atan2(attackDirection.y, attackDirection.x));
+        
         firePoint.transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(attackDirection.y, attackDirection.x)* Mathf.Rad2Deg-90);
         if (attackDirection.magnitude > 0){weapon.Fire();}
 
+
+        //handles sprite direction
         if (attackDirection.x > 0) {spriteRenderer.flipX = false;}
         if (attackDirection.x < 0) {spriteRenderer.flipX = true;}
     }
