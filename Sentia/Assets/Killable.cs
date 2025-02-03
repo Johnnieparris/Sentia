@@ -5,10 +5,12 @@ public class Killable : MonoBehaviour
 {
 
     public int health = 1;
-    public string takenDamageTag;
+    public string[] takenDamageTags;
     public Animator animator;
 
     public UnityEvent onDied;
+
+    public UnityEvent OnDamage;
 
     void Awake()
     {
@@ -18,16 +20,19 @@ public class Killable : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.CompareTag(takenDamageTag))
-        {
-            health --;
-            animator.SetTrigger("TakeDamage"); 
-             if (health <= 0) 
+        foreach (string tag in takenDamageTags){
+            if (collision.gameObject.CompareTag(tag))
             {
-                onDied.Invoke();
+                health --;
+                OnDamage.Invoke();
+                animator.SetTrigger("TakeDamage"); 
+                if (health <= 0) 
+                {
+                    onDied.Invoke();
+                }
+                break;
             }
         }
-        
         
     }
 
