@@ -10,16 +10,14 @@ public class Interactable : MonoBehaviour
         audioHandler = GameObject.FindGameObjectWithTag("Audio");
     }
 
-    public UnityEvent onPickup;
 
-     void OnTriggerEnter2D(Collider2D collision){
+    void OnTriggerEnter2D(Collider2D collision){
 
         if(collision.gameObject.CompareTag("Player"))
-        {
-            onPickup.Invoke();
+        {   
             audioHandler.GetComponents<AudioSource>()[1].Play();
-            Destroy(gameObject);
             collision.gameObject.GetComponent<Killable>().updateHealth(1);
+            Destroy(gameObject);
         }
         
     }

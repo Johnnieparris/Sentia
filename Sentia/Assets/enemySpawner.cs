@@ -3,7 +3,8 @@ using System.Collections;
 
 public class enemySpawner : MonoBehaviour
 {
-public GameObject enemyPrefab;  // Enemy prefab to spawn
+    public GameObject enemyPrefab;  // Enemy prefab to spawn
+    public GameObject BossPrefab;
     public Transform[] spawnPoints; // Array of spawn positions
 
     public float initialSpawnRate = 3f; // Start spawning every 3 seconds
@@ -38,5 +39,11 @@ public GameObject enemyPrefab;  // Enemy prefab to spawn
 
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+    }
+
+    public void SpawnBoss()
+    {
+        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Instantiate(BossPrefab, spawnPoint.position, Quaternion.identity);
     }
 }

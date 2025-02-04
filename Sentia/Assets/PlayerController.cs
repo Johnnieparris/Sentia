@@ -19,6 +19,8 @@ public class PlayerCtrl : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public GameObject canvas;
 
+    public GameObject enemySpawner;
+
     
 
     void Start()
@@ -80,10 +82,14 @@ public class PlayerCtrl : MonoBehaviour
         if (attackDirection.x < 0) {spriteRenderer.flipX = true;}
     }
 
-    public void IncreaseScore()
+    public void IncreaseScore(int num)
     {
-        gameScore++;
+        gameScore += num;
         canvas.GetComponent<HealthUIScript>().updateScoreUI();
+
+        if (gameScore % 50 == 0) {
+            enemySpawner.GetComponent<enemySpawner>().SpawnBoss();
+        }
     }
 }
 

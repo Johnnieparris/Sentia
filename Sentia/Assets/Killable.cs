@@ -22,21 +22,23 @@ public class Killable : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")){Destroy(gameObject);}
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         foreach (string tag in takenDamageTags){
             if (collision.gameObject.CompareTag(tag))
             {
-                health --;
-                OnDamage.Invoke();
-
-                if (gameObject.CompareTag("Player")){animator.SetTrigger("TakeDamage");}
-                
-                
-                if (health <= 0) 
+                if (collision.gameObject.CompareTag("BossDamage"))
                 {
-                    onDied.Invoke();
+                    updateHealth(-5);
+                } else 
+                {
+                    updateHealth(-1);
                 }
+                
                 break;
             }
         }
@@ -47,18 +49,16 @@ public class Killable : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void updateHealth(int num)
+    public void updateHealth(int num = 1)
     {
         health += num;
-        UICanvas.GetComponent<HealthUIScript>().updateHealthUI();
+        if (gameObject.CompareTag("Player")){UICanvas.GetComponent<HealthUIScript>().updateHealthUI();}
         if (num < 0)
         {
             OnDamage.Invoke();
             if (gameObject.CompareTag("Player")){animator.SetTrigger("TakeDamage");}
         }
         
-        
-
         if (health <= 0) 
         {
             onDied.Invoke();

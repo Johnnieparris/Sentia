@@ -13,7 +13,11 @@ public class EnemyBehaviour : MonoBehaviour
     public Animator animator;
 
     public GameObject heart;
+    public GameObject milk;
     public int heartDropChance = 20;
+    public int milkDropChance = 20;
+
+    public int pointsWorth = 1;
 
     public GameObject acid;
     
@@ -45,12 +49,18 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+    //spawns acid or heart or milk on death 
     public void OnDied()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>().IncreaseScore();
-        if (Random.Range(1,heartDropChance + 1) == heartDropChance){
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>().IncreaseScore(pointsWorth);
+        if (Random.Range(1,heartDropChance + 1) == heartDropChance) //spawns heart
+        { 
             Instantiate(heart, transform.position, Quaternion.identity);
-        } else 
+        } else if (Random.Range(1,heartDropChance + 1) == milkDropChance) //spawns milk
+        {
+            Instantiate(milk, transform.position, Quaternion.identity);
+        }
+        else //spawns acid
         {
             Instantiate(acid, new Vector3(transform.position.x,transform.position.y - 0.1f,0), Quaternion.identity);
             audioHandler.GetComponents<AudioSource>()[2].Play();

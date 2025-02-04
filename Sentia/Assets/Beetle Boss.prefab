@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 689687572372824669}
   - component: {fileID: -3637561831619252330}
   m_Layer: 0
-  m_Name: Beetle
-  m_TagString: EnemyDamage
+  m_Name: Beetle Boss
+  m_TagString: BossDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5321551436249453811}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae9f734e4311d74891a0b091266bd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 25
   takenDamageTags:
   - Player
   - PlayerDamage
@@ -241,13 +241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c736a86ea729cff4c85d40b558a38123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.25
   gridSize: 0.25
   animator: {fileID: 0}
   heart: {fileID: 879809026059768140, guid: ea425b49998851447ab222cd6d3179db, type: 3}
   milk: {fileID: 7907946280581036392, guid: b15ce8a013fd3814f8969ff5ac3ca53a, type: 3}
   heartDropChance: 20
   milkDropChance: 20
+  pointsWorth: 10
   acid: {fileID: 3850419250915447047, guid: f788cadfac92a0d4f868253cd79f51c8, type: 3}
   audioHandler: {fileID: 0}
 --- !u!95 &689687572372824669

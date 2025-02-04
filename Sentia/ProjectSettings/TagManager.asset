@@ -7,6 +7,7 @@ TagManager:
   - PlayerDamage
   - EnemyDamage
   - Audio
+  - BossDamage
   layers:
   - Default
   - TransparentFX
