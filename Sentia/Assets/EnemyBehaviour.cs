@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public Transform playerTransform;
+    private Transform playerTransform;
     public float speed;
     public float gridSize = 0.5f;
 
@@ -14,6 +14,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     public GameObject heart;
     public int heartDropChance = 20;
+
+    public GameObject acid;
     
 
     private Vector2 targetDirection;
@@ -46,8 +48,13 @@ public class EnemyBehaviour : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>().IncreaseScore();
         if (Random.Range(1,heartDropChance + 1) == heartDropChance){
             Instantiate(heart, transform.position, Quaternion.identity);
+        } else 
+        {
+            Instantiate(acid, transform.position, Quaternion.identity);
         }
     }
+
+
 
     Vector3 CalculateDirection()
     {

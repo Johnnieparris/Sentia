@@ -29,7 +29,8 @@ public class Killable : MonoBehaviour
                 health --;
                 OnDamage.Invoke();
 
-                animator.SetTrigger("TakeDamage");
+                if (gameObject.CompareTag("Player")){animator.SetTrigger("TakeDamage");}
+                
                 
                 if (health <= 0) 
                 {
