@@ -25,7 +25,9 @@ public class Killable : MonoBehaviour
             {
                 health --;
                 OnDamage.Invoke();
-                animator.SetTrigger("TakeDamage"); 
+
+                animator.SetTrigger("TakeDamage");
+                
                 if (health <= 0) 
                 {
                     onDied.Invoke();

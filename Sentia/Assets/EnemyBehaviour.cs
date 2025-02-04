@@ -23,7 +23,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     }
 
-void Update()
+    void Update()
     {
         if (!isMoving)
         {
@@ -36,6 +36,11 @@ void Update()
             // Start moving toward the target position
             StartCoroutine(MoveToTarget(targetPosition));
         }
+    }
+
+    public void OnDied()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>().IncreaseScore();
     }
 
     Vector3 CalculateDirection()

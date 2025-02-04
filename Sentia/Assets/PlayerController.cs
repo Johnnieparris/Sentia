@@ -1,6 +1,7 @@
 //using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class PlayerCtrl : MonoBehaviour
     InputAction moveAction;
     InputAction attackAction;
     public GameObject firePoint;
+    public int gameScore;
 
     public Animator animator;
     private SpriteRenderer spriteRenderer;
+    public GameObject canvas;
+
+
 
     void Start()
     {
@@ -59,6 +64,12 @@ public class PlayerCtrl : MonoBehaviour
         //handles sprite direction
         if (attackDirection.x > 0) {spriteRenderer.flipX = false;}
         if (attackDirection.x < 0) {spriteRenderer.flipX = true;}
+    }
+
+    public void IncreaseScore()
+    {
+        gameScore++;
+        canvas.GetComponent<HealthUIScript>().updateScoreUI();
     }
 }
 

@@ -6,7 +6,8 @@ public class HealthUIScript : MonoBehaviour
 {
 
     public GameObject player;
-    public TMP_Text text;
+    public TMP_Text healthText;
+    public TMP_Text scoreText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +24,12 @@ public class HealthUIScript : MonoBehaviour
     public void updateHealthUI()
     {
         int newVal = player.GetComponent<Killable>().health;
-        text.text = newVal.ToString();
+        healthText.text = newVal.ToString();
+    }
+
+    public void updateScoreUI()
+    {
+        int newVal = player.GetComponent<PlayerCtrl>().gameScore;
+        scoreText.text = newVal.ToString();
     }
 }
