@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerDamage
   - EnemyDamage
+  - Audio
   layers:
   - Default
   - TransparentFX

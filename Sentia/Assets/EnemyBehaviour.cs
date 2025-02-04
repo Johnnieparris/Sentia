@@ -19,12 +19,14 @@ public class EnemyBehaviour : MonoBehaviour
     
 
     private Vector2 targetDirection;
+    public GameObject audioHandler;
 
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioHandler = GameObject.FindGameObjectWithTag("Audio");
 
     }
 
@@ -51,7 +53,9 @@ public class EnemyBehaviour : MonoBehaviour
         } else 
         {
             Instantiate(acid, transform.position, Quaternion.identity);
+            audioHandler.GetComponents<AudioSource>()[2].Play();
         }
+        
     }
 
 
