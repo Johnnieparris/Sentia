@@ -22,6 +22,7 @@ public class Killable : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Player")){Destroy(gameObject);}
 
         foreach (string tag in takenDamageTags){
             if (collision.gameObject.CompareTag(tag))
@@ -50,6 +51,19 @@ public class Killable : MonoBehaviour
     {
         health += num;
         UICanvas.GetComponent<HealthUIScript>().updateHealthUI();
+        if (num < 0)
+        {
+            OnDamage.Invoke();
+            if (gameObject.CompareTag("Player")){animator.SetTrigger("TakeDamage");}
+        }
+        
+        
+
+        if (health <= 0) 
+        {
+            onDied.Invoke();
+        }
+                
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

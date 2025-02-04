@@ -52,7 +52,7 @@ public class EnemyBehaviour : MonoBehaviour
             Instantiate(heart, transform.position, Quaternion.identity);
         } else 
         {
-            Instantiate(acid, transform.position, Quaternion.identity);
+            Instantiate(acid, new Vector3(transform.position.x,transform.position.y - 0.1f,0), Quaternion.identity);
             audioHandler.GetComponents<AudioSource>()[2].Play();
         }
         

@@ -156,7 +156,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6852926033789064712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,13 +241,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c736a86ea729cff4c85d40b558a38123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
   speed: 1
   gridSize: 0.25
   animator: {fileID: 0}
   heart: {fileID: 879809026059768140, guid: ea425b49998851447ab222cd6d3179db, type: 3}
   heartDropChance: 20
   acid: {fileID: 3850419250915447047, guid: f788cadfac92a0d4f868253cd79f51c8, type: 3}
+  audioHandler: {fileID: 0}
 --- !u!95 &689687572372824669
 Animator:
   serializedVersion: 7
@@ -280,7 +280,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7040ecdf30db7a14c95e7c187976a22e, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7040ecdf30db7a14c95e7c187976a22e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
