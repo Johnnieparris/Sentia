@@ -7,10 +7,13 @@ public class Killable : MonoBehaviour
     public int health = 1;
     public string[] takenDamageTags;
     public Animator animator;
+    public Canvas UICanvas;
 
     public UnityEvent onDied;
 
     public UnityEvent OnDamage;
+
+
 
     void Awake()
     {
@@ -40,6 +43,12 @@ public class Killable : MonoBehaviour
 
     public void destoryObejct(){
         Destroy(gameObject);
+    }
+
+    public void updateHealth(int num)
+    {
+        health += num;
+        UICanvas.GetComponent<HealthUIScript>().updateHealthUI();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

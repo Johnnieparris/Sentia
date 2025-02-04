@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1432194589156456899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.071, y: 0.142, z: -0.008537494}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -173,6 +173,7 @@ MonoBehaviour:
   - Player
   - PlayerDamage
   animator: {fileID: 0}
+  UICanvas: {fileID: 0}
   onDied:
     m_PersistentCalls:
       m_Calls:
@@ -219,6 +220,8 @@ MonoBehaviour:
   speed: 1
   gridSize: 0.25
   animator: {fileID: 0}
+  heart: {fileID: 879809026059768140, guid: ea425b49998851447ab222cd6d3179db, type: 3}
+  heartDropChance: 20
 --- !u!95 &689687572372824669
 Animator:
   serializedVersion: 7

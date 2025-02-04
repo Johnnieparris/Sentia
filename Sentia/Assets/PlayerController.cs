@@ -11,6 +11,7 @@ public class PlayerCtrl : MonoBehaviour
     Rigidbody2D rb; 
     InputAction moveAction;
     InputAction attackAction;
+    InputAction pauseAction;
     public GameObject firePoint;
     public int gameScore;
 
@@ -18,13 +19,15 @@ public class PlayerCtrl : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public GameObject canvas;
 
-
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         moveAction = InputSystem.actions.FindAction("Move");
         attackAction = InputSystem.actions.FindAction("Attack");
+        pauseAction = InputSystem.actions.FindAction("Pause");
+        
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -46,6 +49,17 @@ public class PlayerCtrl : MonoBehaviour
             animator.SetBool("BisMoving", false);
         }
 
+        //handle pause
+        if (pauseAction.WasPressedThisFrame()){
+            if (canvas.GetComponent<pauseMenuScript>().paused)
+            {
+                canvas.GetComponent<pauseMenuScript>().UnPause();
+            } else 
+            {
+                canvas.GetComponent<pauseMenuScript>().Pause();
+            }
+            
+        }
 
         //handle attack direction
         CheckAttack();

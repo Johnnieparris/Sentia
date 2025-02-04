@@ -11,6 +11,9 @@ public class EnemyBehaviour : MonoBehaviour
     private Vector3 targetPosition;
 
     public Animator animator;
+
+    public GameObject heart;
+    public int heartDropChance = 20;
     
 
     private Vector2 targetDirection;
@@ -41,6 +44,9 @@ public class EnemyBehaviour : MonoBehaviour
     public void OnDied()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>().IncreaseScore();
+        if (Random.Range(1,heartDropChance + 1) == heartDropChance){
+            Instantiate(heart, transform.position, Quaternion.identity);
+        }
     }
 
     Vector3 CalculateDirection()
@@ -99,4 +105,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         isMoving = false;
     }
+
+
+
 }
