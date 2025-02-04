@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 9bb0cc82500008f41bbcfc71b8bc1e9e
+guid: 44ea759d209912c4ba127f3c4a657363
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7447094551116746116
-    second: move with FX_0
+      213: 1119186182055880896
+    second: heart.rotate_0
   - first:
-      213: -4982930175070621285
-    second: move with FX_1
+      213: -6905628893321258286
+    second: heart.rotate_1
   - first:
-      213: 7874383876374163513
-    second: move with FX_2
+      213: 960922822409712789
+    second: heart.rotate_2
   - first:
-      213: -3900661201671380613
-    second: move with FX_3
+      213: -5128260309238213669
+    second: heart.rotate_3
   - first:
-      213: -1510535693194602122
-    second: move with FX_4
+      213: 8337558890082479661
+    second: heart.rotate_4
   - first:
-      213: -5168386671329646749
-    second: move with FX_5
+      213: -4847339251091697170
+    second: heart.rotate_5
   - first:
-      213: 7278531460873872611
-    second: move with FX_6
+      213: 4785657804656733016
+    second: heart.rotate_6
   - first:
-      213: 4066826420906904797
-    second: move with FX_7
+      213: 4042861663274275832
+    second: heart.rotate_7
+  - first:
+      213: 8982269635521259383
+    second: heart.rotate_8
+  - first:
+      213: 7445354474003776980
+    second: heart.rotate_9
+  - first:
+      213: 3551290374349410236
+    second: heart.rotate_10
+  - first:
+      213: 6024038612816269757
+    second: heart.rotate_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,167 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: move with FX_0
+      name: heart.rotate_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 182
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48d8f00b905695760800000000000000
-      internalID: 7447094551116746116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_1
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 156
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b91375e086319dab0800000000000000
-      internalID: -4982930175070621285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_2
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 130
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 93078505a6e674d60800000000000000
-      internalID: 7874383876374163513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_3
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 104
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b71aa3dbd411ed9c0800000000000000
-      internalID: -3900661201671380613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_4
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 78
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 679569a4acf790be0800000000000000
-      internalID: -1510535693194602122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_5
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 52
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3676889a4b33648b0800000000000000
-      internalID: -5168386671329646749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_6
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 26
-        width: 37
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e464e3ecc9820560800000000000000
-      internalID: 7278531460873872611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move with FX_7
-      rect:
-        serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 37
-        height: 26
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +161,250 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ddc44553515407830800000000000000
-      internalID: 4066826420906904797
+      spriteID: 0c867f227e5288f00800000000000000
+      internalID: 1119186182055880896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da99eeeb174a20a0800000000000000
+      internalID: -6905628893321258286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594fb4e3732e55d00800000000000000
+      internalID: 960922822409712789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd31f106b62c4d8b0800000000000000
+      internalID: -5128260309238213669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e2441e2a5f4b370800000000000000
+      internalID: 8337558890082479661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee11fd822aacabcb0800000000000000
+      internalID: -4847339251091697170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85be327fa621a6240800000000000000
+      internalID: 4785657804656733016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3128343412b1830800000000000000
+      internalID: 4042861663274275832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777a506b4ae67ac70800000000000000
+      internalID: 8982269635521259383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d54cd96276335760800000000000000
+      internalID: 7445354474003776980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf4c59a7c7b84130800000000000000
+      internalID: 3551290374349410236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1962e933fa99350800000000000000
+      internalID: 6024038612816269757
       vertices: []
       indices: 
       edges: []
@@ -313,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 17654f6b0597bdb4fac5dc6b25c55fb5
+    spriteID: 2c80b5f42a534f14ea023b51aaf6796a
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      move with FX_0: 7447094551116746116
-      move with FX_1: -4982930175070621285
-      move with FX_2: 7874383876374163513
-      move with FX_3: -3900661201671380613
-      move with FX_4: -1510535693194602122
-      move with FX_5: -5168386671329646749
-      move with FX_6: 7278531460873872611
-      move with FX_7: 4066826420906904797
+      heart.rotate_0: 1119186182055880896
+      heart.rotate_1: -6905628893321258286
+      heart.rotate_10: 3551290374349410236
+      heart.rotate_11: 6024038612816269757
+      heart.rotate_2: 960922822409712789
+      heart.rotate_3: -5128260309238213669
+      heart.rotate_4: 8337558890082479661
+      heart.rotate_5: -4847339251091697170
+      heart.rotate_6: 4785657804656733016
+      heart.rotate_7: 4042861663274275832
+      heart.rotate_8: 8982269635521259383
+      heart.rotate_9: 7445354474003776980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

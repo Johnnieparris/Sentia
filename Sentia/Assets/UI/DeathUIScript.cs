@@ -8,4 +8,10 @@ public class DeathUIScript : MonoBehaviour
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
+
+    public void QuiteGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
+    }
 }
