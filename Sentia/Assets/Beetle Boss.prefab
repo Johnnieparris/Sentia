@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4160000210121766210}
   - component: {fileID: 689687572372824669}
   - component: {fileID: -3637561831619252330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beetle Boss
   m_TagString: BossDamage
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ MonoBehaviour:
   heartDropChance: 20
   milkDropChance: 20
   pointsWorth: 10
-  acid: {fileID: 3850419250915447047, guid: f788cadfac92a0d4f868253cd79f51c8, type: 3}
+  acid: {fileID: 3850419250915447047, guid: b64e242ce66728943877c3813fffd249, type: 3}
   audioHandler: {fileID: 0}
 --- !u!95 &689687572372824669
 Animator:
@@ -380,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5321551436249453811}
   - component: {fileID: 8450445401494969132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
