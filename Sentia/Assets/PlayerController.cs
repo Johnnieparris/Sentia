@@ -91,5 +91,15 @@ public class PlayerCtrl : MonoBehaviour
             enemySpawner.GetComponent<enemySpawner>().SpawnBoss();
         }
     }
+
+    public void SaveHighScore()
+{
+    int currentHighScore = PlayerPrefs.GetInt("HighScore", 0);
+    if (gameScore > currentHighScore)
+    {
+        PlayerPrefs.SetInt("HighScore", gameScore);
+        PlayerPrefs.Save();
+    }
+}
 }
 

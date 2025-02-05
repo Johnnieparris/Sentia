@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5815090238502636196}
   - component: {fileID: 1009860700374586292}
   - component: {fileID: 6799327560569370385}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Acid blob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
