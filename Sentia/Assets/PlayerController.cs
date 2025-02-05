@@ -1,4 +1,5 @@
 //using System.Numerics;
+//using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
@@ -21,6 +22,8 @@ public class PlayerCtrl : MonoBehaviour
 
     public GameObject enemySpawner;
 
+    Vector2 mouseDirection;
+    Vector2 mousePosition;
     
 
     void Start()
@@ -34,8 +37,48 @@ public class PlayerCtrl : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    Vector2 ClampDistance(Vector2 targetPos, Vector2 objectPos, Vector2 centerPos, float maxDistance)
+    {
+        // Move towards the target
+        Vector2 desiredPosition = targetPos;
+
+        // Calculate the distance from the center object
+        float distanceFromCenter = Vector2.Distance(centerPos, desiredPosition);
+
+        // If the new position exceeds the max allowed distance, clamp it
+        if (distanceFromCenter > maxDistance)
+        {
+            Vector2 direction = (desiredPosition - centerPos).normalized;
+            return centerPos + direction * maxDistance; // Clamp to radius
+        }
+
+        return desiredPosition; // Return the original target position if within bounds
+    }
+
+
+    private void FixedUpdate()
+    {
+        Vector2 aimDirection = mousePosition - rb.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        firePoint.transform.rotation = Quaternion.Euler(0,0,aimAngle);
+
+        Vector2 playerPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        Vector2 firepointPos = new Vector2(firePoint.transform.localPosition.x, firePoint.transform.localPosition.y);
+        
+        firepointPos = ClampDistance(mousePosition, firepointPos, playerPos, 0.175f);
+
+        firePoint.transform.position = new Vector3(firepointPos.x, firepointPos.y, 0);
+    }
+
     void Update()
     {
+
+        //handle mouse
+        if (Input.GetMouseButton(0)){
+            weapon.Fire();
+            
+        }
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         //handle movement
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
@@ -64,10 +107,11 @@ public class PlayerCtrl : MonoBehaviour
         }
 
         //handle attack direction
-        CheckAttack();
+        //CheckAttack();
         
     }
 
+    //old code for arrow key aiming and shooting
     void CheckAttack()
     {
         Vector2 attackDirection = attackAction.ReadValue<Vector2>();
