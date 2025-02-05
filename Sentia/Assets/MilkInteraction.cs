@@ -21,6 +21,7 @@ public class MilkInteraction : MonoBehaviour
             player = collision.gameObject;
             audioHandler.GetComponents<AudioSource>()[1].Play();
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponentsInChildren<SpriteRenderer>()[1].enabled = false;
             player.GetComponent<Weapon>().fireRate = 6f;
             player.GetComponent<PlayerCtrl>().moveSpeed = 3f;
             StartCoroutine(ReturnToNorm(5f));

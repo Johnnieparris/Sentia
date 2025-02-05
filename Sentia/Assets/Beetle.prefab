@@ -241,13 +241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c736a86ea729cff4c85d40b558a38123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.9
   gridSize: 0.25
   animator: {fileID: 0}
   heart: {fileID: 879809026059768140, guid: ea425b49998851447ab222cd6d3179db, type: 3}
   milk: {fileID: 7907946280581036392, guid: b15ce8a013fd3814f8969ff5ac3ca53a, type: 3}
   heartDropChance: 20
   milkDropChance: 20
+  pointsWorth: 1
   acid: {fileID: 3850419250915447047, guid: f788cadfac92a0d4f868253cd79f51c8, type: 3}
   audioHandler: {fileID: 0}
 --- !u!95 &689687572372824669
